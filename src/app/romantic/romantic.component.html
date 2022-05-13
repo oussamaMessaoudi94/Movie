@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+
+
+
+
+    <div class="product spad"  style="margin-left: 20%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product"  >
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" >
+                                <div class="section-title">
+                                    <h4>Romantic</h4>
+                                </div>
+                            </div>
+                        </div>
+    <div class="row" >
+        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let romantic of romantic">
+     
+                <div class="product__item__pic set-bg" ><a (click)="film(romantic._id)"><img src="assets/images/{{romantic.img}}" alt=""></a>
+                    <div class="ep">{{romantic.score}} / 10</div>
+                  
+                </div>
+        
+                <div class="product__item__text">
+                    <h5 style="text-align: center;"><a (click)="film(romantic._id)">{{romantic.nameFilm}}</a></h5>
+                </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    </div>

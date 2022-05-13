@@ -1,0 +1,125 @@
+<app-nav-admin></app-nav-admin>
+    
+<!-- Normal Breadcrumb Begin -->
+<section class="normal-breadcrumb set-bg" style="background-image: url('assets/img/normal-breadcrumb.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="normal__breadcrumb__text">
+                    <h2>Add Movie</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Normal Breadcrumb End -->
+
+<!-- Signup Section Begin -->
+<section class="signup spad">
+    
+        
+            
+            
+                <div class="login__form" >
+                    
+                    <form action="#" class="row" [formGroup]="movieForm">
+
+                        <div class="col-6">
+                            <p style="color: rgb(245, 241, 241);">Name Film</p>
+                        <div class="input">
+                            
+                            <input type="text" placeholder="" formControlName="nameFilm" required="required">
+                        
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p style="color: rgb(245, 241, 241);">Date Aired</p>
+                        <div class="input">
+                            <input type="date" placeholder="" formControlName="dateAired" required="required">
+                            
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p style="color: rgb(245, 241, 241);">Genre</p>
+                        <div class="form-group"  >
+                            <select id="c_country" class="form-control" formControlName="genre" required="required" style="width: 60%;font-size: 150%;">
+                              <option value="Action">Action</option>
+                              <option value="Horror">Horror</option>
+                              <option value="Romantic">Romantic</option>
+                              <option value="Anime">Anime</option>
+                              <option value="Serie">Serie</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <p style="color: rgb(245, 241, 241);">Score</p>
+                        <div class="input">
+                            <input type="number" placeholder="" formControlName="score" required="required">
+                            
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p style="color: rgb(245, 241, 241);">Duration</p>
+                        <div class="input">
+                            <input type="time" placeholder="" formControlName="duration" required="required">
+                            
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p style="color: rgb(245, 241, 241);">Quality</p>
+                        <div class="form-group"  >
+                            <select id="c_country" class="form-control" formControlName="quality" required="required" style="width: 60%;font-size: 150%;">
+                              <option value="HD">HD</option>
+                              <option value="FULL HD">FULL HD</option>
+                              <option value="BLUERY">BLUERY</option>
+                            </select>
+                          </div>
+                    </div>
+                                        
+                    <div class="col-3" class="form-floating" >.
+                        <p style="color: rgb(245, 241, 241);margin-left: 4%;">Description</p>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 50px; width: 300px; margin-left: 13px;" formControlName='description' required="required" ></textarea>              
+                      </div>
+                      <div  class="col-6"></div>
+                    <div>
+                        <div>
+                            <button class="btn btn-secondary" (click)='filePicker.click()' style="margin-top: 5%;margin-left: 2%;">select image movie</button>
+                        </div>
+                          <div style="visibility: hidden;">
+                            <div class="form_title">image</div>
+                            <input type="file" class="comment_input" required="required" #filePicker (change)='onImageSelected($event)'>
+                        </div>
+                        <img [src]="imagePreview" *ngIf='imagePreview' width="30%" style="margin-bottom: 5%;" >
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <button class="btn btn-secondary" (click)='filePicke.click()' style="margin-top: 5%;margin-left: 2%;">select video movie</button>
+                        </div>
+                          <div style="visibility: hidden;">
+                            <div class="form_title">Video</div>
+                            <input type="file" class="comment_input" required="required" #filePicke (change)="onVideoSelected($event)">
+                            
+                        </div>
+                        <video height="200" controls [src]="videoPreview" *ngIf='videoPreview'> </video> 
+                       
+                        <!-- <p>
+                            Image/Video Preview
+                          </p>
+                          
+                          <img [src]="url" *ngIf="format==='image' && url" height="200"> <br/>
+                          <video [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br/>
+                          <input type='file' (change)="onSelectFile($event)" > -->
+                    </div>
+
+                    <div class="col" style="margin-left: 33%;">
+                        <button type="submit" class="site-btn" (click)="addMovie(movieForm.value)">Add Movie</button>
+                    </div>
+
+                    </form>
+
+                </div>
+            
+       
+  
+</section>
+<!-- Signup Section End -->

@@ -1,0 +1,14 @@
+
+
+input[type=text] {
+	width: 80%;
+    height: 5%;
+color: black;
+}
+
+
+
+
+.animals{
+display: list-item;	
+}

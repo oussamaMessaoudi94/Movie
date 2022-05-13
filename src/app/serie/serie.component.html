@@ -1,0 +1,29 @@
+<app-nav></app-nav>
+
+
+
+
+
+
+    <div class="product spad"  style="margin-left: 20%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product"  >
+    <div class="row" >
+        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let serie of serie">
+     
+                <div class="product__item__pic set-bg" ><a (click)="film(serie._id)"><img src="assets/images/{{serie.img}}" alt=""></a>
+                  
+                </div>
+        
+                <div class="product__item__text">
+                    <h5 style="text-align: center;"><a (click)="film(serie._id)" >{{serie.nameFilm}}</a></h5>
+                </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    </div>

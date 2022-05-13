@@ -1,0 +1,139 @@
+   
+
+            
+        
+    <app-nav-admin></app-nav-admin>
+
+    <!-- Hero Section Begin -->
+    <div class="hero__items set-bg" style="background-image: url('assets/img/hero/hero-1.jpg');">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="hero__text">
+                    <div class="label">Adventure</div>
+                    <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                    <p>After 30 days of travel across the world...</p>
+                    <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+
+    <div class="product spad" style="margin-left: 20%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product"  >
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8" >
+                                <div class="section-title">
+                                    <h4>Action</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="/action-admin" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row" >
+                            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let movies of movies">
+                                
+                                    <div class="product__item__pic set-bg" ><a (click)="film(movies._id)"><img src="assets/images/{{movies.img}}" alt=""></a>
+                                        <div class="ep">{{movies.score}} / 10</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5 style="text-align: center;"><a (click)="film(movies._id)">{{movies.nameFilm}}</a></h5>
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Horror</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="/horror-admin" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let horror of horror">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"><a (click)="film(horror._id)"><img src="assets/images/{{horror.img}}" alt=""></a>
+                                        <div class="ep">{{horror.score}} / 10</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5 style="text-align: center;"><a (click)="film(horror._id)">{{horror.nameFilm}}</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Romantic</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="/romantic-admin" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let romantic of romantic">
+                                
+                                    <div class="product__item__pic set-bg"><a (click)="film(romantic._id)"><img src="assets/images/{{romantic.img}}" alt=""></a>
+                                        <div class="ep">{{romantic.score}} / 10</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5 style="text-align: center;"><a (click)="film(romantic._id)">{{romantic.nameFilm}}</a></h5>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="popular__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Anime</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="/anime-admin" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let anime of anime">
+                               
+                                    <div class="product__item__pic set-bg"><a (click)="film(anime._id)"><img src="assets/images/{{anime.img}}" alt=""></a>
+                                        <div class="ep">{{anime.score}} / 10</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5 style="text-align: center;"><a (click)="film(anime._id)">{{anime.nameFilm}}</a></h5>
+                                    </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+</div>
+</div>
+</div>
+
+
